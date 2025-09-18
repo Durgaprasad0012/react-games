@@ -16,7 +16,8 @@ const LoadingPage: React.FC = () => {
             className={`fixed top-0 left-0 w-screen h-screen bg-black flex justify-center items-center text-white text-xl font-bold transition-opacity duration-700 ease-in-out z-50
             ${fadeOut ? "opacity-0 pointer-events-none" : "opacity-100"}`}
         >
-            <img src={Load} alt="" />
+            <img src={Load} alt="logo" />
+            <p className="text-sm text-center absolute bottom-10 left-1/2 transform -translate-x-1/2">powered by Durgraprasad Subramanian</p>
         </div>
     );
 };

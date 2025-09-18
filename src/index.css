@@ -1,0 +1,92 @@
+@import "tailwindcss";
+
+:root{
+  --bg-white:#fff;
+  --bg-dark:#000;
+  --primary:#0d6efd;
+  --bg-color:#000000cc;
+}
+
+*{
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+/* Font for Head */
+@font-face {
+  font-family: 'Bitcount';
+  src: url('./assets/fonts/Bitcount_Cursive-ExtraBold.ttf') format('ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+/* For Chrome, Safari, Edge, Opera */
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* For Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+/* For most browsers */
+.scroll-hide {
+  scrollbar-width: none; /* Firefox */
+}
+
+/* Chrome, Safari, Edge */
+.scroll-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* Animation */
+.shake {
+  position: relative;
+  top: 0px;
+  animation: shakes 2s ease-in-out .5s infinite !important;
+}
+
+@keyframes shakes {
+  0%{top:-40px}
+  20%{top:0px}
+  40%{top:-40px}
+  60%{top:0px}
+  80%{top:-40px}
+  100%{top:0px}
+}
+
+.finished {
+  animation: finished 2s ease-out;
+}
+
+
+@keyframes finished {
+  from {
+    top: 20px;
+    opacity: 1;
+  }
+  to {
+    transform: scale(5);
+    opacity: 0;
+  }
+}
+
+.blur-box {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  backdrop-filter: blur(10px); /* 🟢 This creates the blur effect */
+  -webkit-backdrop-filter: blur(10px); /* Safari support */
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: white;
+  text-align: center;
+}
+
+button {
+  -webkit-touch-callout: none; /* disables callout menu on iOS */
+  -webkit-user-select: none;   /* disables text selection */
+  user-select: none;
+  touch-action: manipulation;  /* prevents double-tap zoom etc. */
+}
